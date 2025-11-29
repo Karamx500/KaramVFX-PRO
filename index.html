@@ -4,8 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karam VFX | Professional Video Editor</title>
-    
     <!-- Google Analytics -->
+    <!-- Formspree Contact Form -->
+<div class="contact-card">
+    <div class="contact-icon">
+        <i class="fas fa-envelope"></i>
+    </div>
+    <h3 class="contact-title">Send Message Form</h3>
+    <p class="contact-description">Fill out the form and I'll get back to you within 24 hours</p>
+    
+    <form action="https://formspree.io/f/mvgjnvwn" method="POST" class="contact-form">
+        <div class="form-group">
+            <input type="text" name="name" placeholder="Your Full Name" required>
+        </div>
+        
+        <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email Address" required>
+        </div>
+        
+        <div class="form-group">
+            <select name="service" required>
+                <option value="">Select Service Type</option>
+                <option value="youtube-editing">YouTube Video Editing</option>
+                <option value="motion-graphics">Motion Graphics</option>
+                <option value="vfx">Visual Effects (VFX)</option>
+                <option value="color-grading">Color Grading</option>
+                <option value="video-ads">Video Ads</option>
+                <option value="other">Other Service</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <textarea name="message" placeholder="Tell me about your project, budget, and timeline..." rows="5" required></textarea>
+        </div>
+        
+        <button type="submit" class="btn contact-btn">
+            <span>🚀 SEND MESSAGE</span>
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </form>
+</div>
+    <!-- Direct Email -->
+<div class="contact-card">
+    <div class="contact-icon">
+        <i class="fas fa-comments"></i>
+    </div>
+    <h3 class="contact-title">Direct Email</h3>
+    <p class="contact-description">Prefer to email directly? Click below</p>
+    
+    <a href="mailto:Karmelasal@gmail.com?subject=Video%20Editing%20Project&body=Hello%20Karam,%20I%20would%20like%20to%20discuss%20a%20video%20editing%20project%20with%20you." 
+       class="btn btn-outline" style="margin-bottom: 2rem;">
+        <span>📧 Karmelasal@gmail.com</span>
+    </a>
+    
+    <div class="response-time">
+        <i class="fas fa-clock"></i>
+        <span>24-hour response time</span>
+    </div>
+    
+    <div class="contact-info">
+        <div class="info-item">
+            <i class="fas fa-globe"></i>
+            <span>Available Worldwide</span>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-video"></i>
+            <span>Free Consultation</span>
+        </div>
+    </div>
+</div>
+        <!-- باقي كود الموقع -->
+
+    <script>
+        // كل الأكواد السابقة التي عندك...
+        
+        // ===== ⭐ أضف هذا الكود هنا ⭐ =====
+        
+        // Formspree Form Success Handling
+        document.querySelector('form[action*="formspree.io"]').addEventListener('submit', function(e) {
+            // Track in Google Analytics
+            gtag('event', 'form_submit', {
+                'event_category': 'contact',
+                'event_label': 'Formspree Form'
+            });
+            
+            // Show success message
+            setTimeout(() => {
+                alert('✅ Message sent successfully! I will contact you within 24 hours.');
+            }, 1000);
+        });
+
+        // Track email clicks
+        document.querySelector('a[href^="mailto:"]').addEventListener('click', function() {
+            gtag('event', 'email_click', {
+                'event_category': 'contact', 
+                'event_label': 'Direct Email'
+            });
+        });
+        
+        // ===== نهاية الإضافة ⭐ =====
+        
+    </script>
+</body>
+</html>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6P4D07MX71"></script>
 <script>
@@ -2363,6 +2464,7 @@
     </script>
 </body>
 </html>
+
 
 
 
